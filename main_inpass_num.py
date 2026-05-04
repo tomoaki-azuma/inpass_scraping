@@ -42,7 +42,7 @@ def scrape_for_year(div, barrier):
 if __name__ == "__main__":
 
     target_divs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  # 検索番号のリスト
-    max_parallel_browsers = 10 # 1セット（バッチ）あたり同時に動かすブラウザ数
+    max_parallel_browsers = 5 # 1セット（バッチ）あたり同時に動かすブラウザ数
     
     # 💡 リストを「max_parallel_browsers」個ずつのグループに分割する
     # 例: [0,1], [2,3], [4,5], [6,7], [8,9]

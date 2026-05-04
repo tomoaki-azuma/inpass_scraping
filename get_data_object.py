@@ -19,7 +19,7 @@ def getTargetApplicant():
 def getTargetPatentNum(target_div=None):
     SELECT_QUERY = f"SELECT * FROM origin_source where status = 0 order by register_number limit 14"
     if target_div is not None:
-        SELECT_QUERY = f"SELECT register_number FROM origin_source where status = 0 and register_number % 10 = {target_div} order by register_number limit 14"
+        SELECT_QUERY = f"SELECT register_number FROM origin_source where status = 0 and register_number % 10 = {target_div} order by register_number desc limit 14"
 
     try:
         conn = sqlite3.connect(DB_NAME)
